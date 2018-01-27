@@ -1,0 +1,24 @@
+{
+  "name": "second_assignment",
+  "version": "1.0.0",
+  "description": "homework",
+  "main": "index.js",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sc4ramouche/second_assignment.git"
+  },
+  "author": "Sc4ramouche",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sc4ramouche/second_assignment/issues"
+  },
+  "homepage": "https://github.com/Sc4ramouche/second_assignment#readme"
+}
