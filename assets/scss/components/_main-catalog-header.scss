@@ -1,0 +1,159 @@
+.main-catalog {
+  width: 100%;
+  margin: 0 auto;
+
+  &__header {
+    padding-top: 16px;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__menu {
+    display: inline-block;
+    margin-bottom: 16px;
+    margin-left: auto;
+    margin-right:auto;
+
+    @include respond-to(medium-screens) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @include respond-to(handhelds) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &__menu-link:hover {
+    color: $br-red;
+  }
+
+  &__menu-item {
+    display: inline-block;
+    padding-top: 20px;
+    margin-right: 16px;
+
+    @include respond-to(medium-screens) {
+      padding-top: 8px;
+      margin-right: 16px;
+    }
+    @include respond-to(handhelds) {
+      display: block;
+      padding-top: 8px;
+      margin-right: 0;
+    }
+  }
+
+  &__menu-item:last-of-type {
+    margin-right: 0;
+  }
+
+  &__form {
+    display: inline-block;
+    margin: 0 auto;
+
+    @include respond-to(medium-screens) {
+      display: block;
+      text-align: center;
+      width: 100%;
+    }
+    @include respond-to(handhelds) {
+      display: block;
+      text-align: center;
+    }
+  }
+
+  &__map {
+    display: inline-block;
+    text-align: left;
+    color: $br-border-grey;
+    min-width: 160px;
+  }
+
+  &__select {
+    color: $br-red;
+    box-sizing: border-box;
+    min-width: 160px;
+  }
+
+  .filter__heading {
+    display: inline-block;
+    margin-right: 8px;
+    position: relative;
+    bottom: 16px;
+  }
+
+  &__filter {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 8px;
+    padding-top: 8px;
+
+    .filter__list {
+      display: inline-block;
+    }
+
+    .filter__link {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      background: #000;
+      border-radius: 50%;
+      position: relative;
+
+      &-estate {
+        background-color: $br-salad;
+      }
+      &-estate::after {
+        background: url("../img/estate.png") no-repeat center center;
+      }
+
+      &-social {
+        background-color: $br-grey;
+      }
+      &-social::after {
+        background: url("../img/social.png") no-repeat center center;
+      }
+
+      &-education {
+        background-color: $br-grey;
+      }
+      &-education::after {
+        background: url("../img/education.png") no-repeat center center;
+      }
+
+      &-music {
+        background-color: $br-orange;
+      }
+      &-music::after {
+        background: url("../img/music.png") no-repeat center center;
+        background-position: 45% 50%;
+      }
+
+      &-transport {
+        background-color: $br-violet;
+      }
+      &-transport::after {
+        background: url("../img/transport.png") no-repeat center center;
+      }
+      &-estate::after,
+      &-social::after,
+      &-education::after,
+      &-music::after,
+      &-transport::after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+      }
+    }
+
+    .filter__list-item {
+      display: inline-block;
+    }
+  }
+}

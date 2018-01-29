@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="public/css/app.css">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <title>Document</title>
+</head>
+<body>
+
+  <header class="header">
+    <a href="#" class="header__logo">
+      <img src="public/img/logo.png" alt="logo" class="header__logo-image">
+    </a>
+    <nav class="header__nav">
+      <label for="header__nav-checkbox" class="header__nav-menu link">Menu</label>
+      <input type="checkbox" class="header__nav-checkbox" id="header__nav-checkbox" role="button">
+      <ul class="header__nav-list">
+        <li class="header__nav-list-item"><a href="#" class="header__nav-link link">Reality</a></li>
+        <li class="header__nav-list-item"><a href="#" class="header__nav-link link">Living</a></li>
+        <li class="header__nav-list-item"><a href="#" class="header__nav-link link">Education</a></li>
+        <li class="header__nav-list-item"><a href="#" class="header__nav-link link">Entertainment</a></li>
+        <li class="header__nav-list-item"><a href="#" class="header__nav-link link">Mobility</a></li>
+      </ul>
+      <input type="search" class="header__search" name="header__search" placeholder="Keyword, name, date...">
+      <label for="header__search" class="header__search-label"><i class="fa fa-search header__search-icon" aria-hidden="true"></i></label>
+    </nav>
+    <div class="header__login">
+      <a href="#" class="header__login-link link"><i class="fa fa-user" aria-hidden="true"></i><span class="header__login-invitation">Login</span></a>
+    </div>
+  </header>
+
+  <section class="search">
+    <div class="search__container">
+      <h2 class="search__heading">What are you looking for?</h2>
+      <form action="#" class="search__form">
+        <select name="city" id="city" class="search__city form-text">
+          <option value="Dubai">Dubai</option>
+        </select>
+        <select name="purpose" id="purpose" class="search__purpose form-text">
+          <option value="Education">Education</option>
+        </select>
+        <input type="text" class="search__keywords form-text" placeholder="Keyword, name, date, ...">
+        <input type="submit" class="search__submit" value="Search">
+      </form>
+    </div>
+  </section>
+
+  <section class="main-catalog">
+    <header class="main-catalog__header">
+      <ul class="main-catalog__menu">
+        <li class="main-catalog__menu-item"><a href="#" class="link main-catalog__menu-link">Recommended</a></li>
+        <li class="main-catalog__menu-item"><a href="#" class="link main-catalog__menu-link">Latest</a></li>
+        <li class="main-catalog__menu-item"><a href="#" class="link main-catalog__menu-link">Highlights</a></li>
+      </ul>
+      <form action="#" class="main-catalog__form">
+        <select name="main-catalog__select" class="main-catalog__select form-text">
+          <option value="Dubai">Dubai</option>
+        </select>
+        <input type="button" class="main-catalog__map form-text" value="Show map">
+      </form>
+      <div class="main-catalog__filter">
+        <h4 class="filter__heading link">Filter:</h4>
+        <ul class="filter__list">
+          <li class="filter__list-item"><a href="#" class="filter__link filter__link-estate"></a></li>
+          <li class="filter__list-item"><a href="#" class="filter__link filter__link-social filter__link-disabled"></a></li>
+          <li class="filter__list-item"><a href="#" class="filter__link filter__link-education filter__link-disabled"></a></li>
+          <li class="filter__list-item"><a href="#" class="filter__link filter__link-music"></a></li>
+          <li class="filter__list-item"><a href="#" class="filter__link filter__link-transport"></a></li>
+        </ul>
+      </div>
+    </header>
+
+    <section class="main-catalog__content">
+      <div class="main-catalog__row">
+        <div class="main-catalog__item main-catalog__item--single-width main-catalog__item--estate">
+          <img src="public/img/catalog-item-estate-cut.jpg" alt="image" class="main-catalog__item-image">
+          <a href="#" class="main-catalog__item-icon"></a>
+          <h4 class="main-catalog__item-heading item-description">2 bedroom house for rent in Dubai</h4>
+          <h3 class="main-catalog__item-category item-category">Vision agency</h3>
+          <div class="main-catalog__item-rating">
+            <img src="public/img/rating.png" alt="stars" class="main-catalog__item-rating-icon">
+            <b class="main-catalog__item-rating-counter">(365)</b>
+          </div>
+          <b class="main-catalog__item-price">$2,990</b>
+        </div>
+        <div class="main-catalog__item main-catalog__item--single-width main-catalog__item--music">
+          <img src="public/img/catalog-item-music-cut.jpg" alt="image" class="main-catalog__item-image">
+          <a href="#" class="main-catalog__item-icon"></a>
+          <h4 class="main-catalog__item-heading item-description">2 bedroom house for rent in Dubai</h4>
+          <h3 class="main-catalog__item-category item-category">Vision agency</h3>
+          <div class="main-catalog__item-rating">
+            <img src="public/img/rating.png" alt="stars" class="main-catalog__item-rating-icon">
+            <b class="main-catalog__item-rating-counter">(365)</b>
+          </div>
+          <b class="main-catalog__item-price">$2,990</b>
+        </div>
+        <div class="main-catalog__item main-catalog__item--single-width main-catalog__item--estate">
+          <img src="public/img/catalog-item-estate-cut.jpg" alt="image" class="main-catalog__item-image">
+          <a href="#" class="main-catalog__item-icon"></a>
+          <h4 class="main-catalog__item-heading item-description">2 bedroom house for rent in Dubai</h4>
+          <h3 class="main-catalog__item-category item-category">Vision agency</h3>
+          <div class="main-catalog__item-rating">
+            <img src="public/img/rating.png" alt="stars" class="main-catalog__item-rating-icon">
+            <b class="main-catalog__item-rating-counter">(365)</b>
+          </div>
+          <b class="main-catalog__item-price">$2,990</b>
+        </div>
+        <div class="main-catalog__item main-catalog__item--single-width main-catalog__item--estate">
+          <img src="public/img/catalog-item-cut.jpg" alt="image" class="main-catalog__item-image">
+          <a href="#" class="main-catalog__item-icon"></a>
+          <h4 class="main-catalog__item-heading item-description">2 bedroom house for rent in Dubai</h4>
+          <h3 class="main-catalog__item-category item-category">Vision agency</h3>
+          <div class="main-catalog__item-rating">
+            <img src="public/img/rating.png" alt="stars" class="main-catalog__item-rating-icon">
+            <b class="main-catalog__item-rating-counter">(365)</b>
+          </div>
+          <b class="main-catalog__item-price">$2,990</b>
+        </div>
+      </div>
+    </section>
+  </section>
+
+</body>
+</html>

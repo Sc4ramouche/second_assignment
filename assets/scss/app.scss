@@ -1,0 +1,27 @@
+@import "reset";
+@import "var";
+@import "mixin";
+@import "colors";
+
+@import "elements/index";
+@import "components/index";
+@import "pages/index";
+@import "fonts/fonts";
+
+.clearfix {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.form-text {
+  box-sizing: border-box;
+  font-family: "GothamBook";
+  font-size: 18px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 16px 24px;
+  border-radius: 32px;
+  border: 1px solid $br-border-grey;
+  outline: none;
+  margin-bottom: 24px;
+}

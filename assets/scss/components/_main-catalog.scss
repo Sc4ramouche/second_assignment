@@ -1,0 +1,127 @@
+.main-catalog__content {
+  background-color: $br-beige;
+  width: 100%;
+  padding-top: 42px;
+  border-top: 1px solid $br-lightgrey;
+}
+
+.main-catalog__row {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.main-catalog__item {
+  position: relative;
+  display: inline-block;
+  max-width: 210px;
+  background-color: #fff;
+  border-radius: 4px;
+  margin-bottom: 32px;
+
+  @include respond-to(handhelds) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &-image {
+    border-bottom: 3px solid $br-grey;
+  }
+
+  &-icon {
+    position: absolute;
+    top: 110px;
+    left: 36%;
+    width: 52px;
+    height: 52px;
+    background-color: $br-grey;
+    border-radius: 50%;
+    border: 3px solid white;
+  }
+
+  &-icon::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: no-repeat center center;
+  }
+
+  &-price {
+    display: none;
+    font-family: "GothamMedium";
+    font-size: 12px;
+    padding: 8px 8px;
+    border-radius: 16px;
+    color: #fff;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+  }
+
+  &-rating {
+    text-align:center;
+    padding-top: 6px;
+    margin-bottom: 8px;
+
+    &-counter {
+      font-family: "GothamMedium";
+      font-size: 12px;
+      color: $br-lgrey;
+    }
+  }
+
+  // styling estate card
+  &--estate &-image {
+    border-bottom: 3px solid $br-salad;
+  }
+  &--estate &-category {
+    color: $br-salad;
+  }
+  &--estate &-price {
+    display: block;
+    background-color: $br-salad;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+  }
+  &--estate &-icon {
+    background-color: $br-salad;
+  }
+  &--estate &-icon::after {
+    background-image: url("../img/estate-bg.png");
+  }
+
+  // styling music card
+  &--music &-image {
+    border-bottom: 3px solid $br-orange;
+  }
+  &--music &-category {
+    color: $br-orange;
+  }
+  &--music &-icon {
+    background-color: $br-orange;
+  }
+  &--music &-icon::after {
+    background-image: url("../img/music-bg.png");
+  }
+}
+
+.item-description {
+  font-family: "GothamMedium";
+  font-size: 14px;
+  text-align: center;
+  padding-top: 24px;
+  margin: 0 8px;
+  color: $br-bluegrey;
+}
+
+.item-category {
+  font-family: "GothamMedium";
+  text-transform: uppercase;
+  font-size: 12px;
+  text-align: center;
+  padding-top: 16px;
+}
