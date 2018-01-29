@@ -3,20 +3,30 @@
   width: 100%;
   padding-top: 42px;
   border-top: 1px solid $br-lightgrey;
+  border-bottom: 1px solid $br-lightgrey;
+  border-bottom-width: 70%;
 }
 
 .main-catalog__row {
-  width: 80%;
+  width: 70%;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+
+  @include respond-to (handhelds) {
+    width: 95%;
+  }
+  @include respond-to (medium-screens) {
+    width: 85%;
+  }
 }
 
 .main-catalog__item {
   position: relative;
   display: inline-block;
   max-width: 210px;
+  min-height: 260px;
   background-color: #fff;
   border-radius: 4px;
   margin-bottom: 32px;
@@ -28,6 +38,11 @@
 
   &-image {
     border-bottom: 3px solid $br-grey;
+
+    &--double-width {
+      max-width: 100%;
+      max-height: 100%;
+    }
   }
 
   &-icon {
@@ -65,12 +80,71 @@
     text-align:center;
     padding-top: 6px;
     margin-bottom: 8px;
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
 
     &-counter {
       font-family: "GothamMedium";
       font-size: 12px;
       color: $br-lgrey;
     }
+  }
+
+  &-rating-avatar {
+    position: absolute;
+    left: 22px;
+    top: 168px;
+
+    @include respond-to(handhelds) {
+      top: 43%;
+      left: 4px;
+    }
+  }
+
+  &-rating-user {
+    padding-top: 16px;
+    margin-bottom: 12px;
+
+    @include respond-to(medium-screens) {
+      padding-left: 104px;
+    }
+    @include respond-to(wide-screens) {
+      padding-left: 104px;
+    }
+  }
+
+  &-rating-author {
+    font-family: "GothamBold";
+    color: $br-bluegrey;
+    font-size: 16px;
+    text-transform: uppercase;
+    display: block;
+    padding-top: 8px;
+    margin-bottom: 8px;
+
+    @include respond-to(handhelds) {
+      padding-left: 88px;
+    }
+  }
+
+  &-rating-comment {
+    font-size: 14px;
+    font-family: "GothamBook";
+    padding-right: 8px;
+    color: #838d9a;
+
+    @include respond-to(handhelds) {
+      padding-top: 24px;
+      padding-left: 8px;
+    }
+  }
+
+  &-read-more {
+    font-size: 14px;
+    font-family: "GothamMedium";
+    color: $br-bluegrey;
   }
 
   // styling estate card
@@ -107,6 +181,82 @@
   &--music &-icon::after {
     background-image: url("../img/music-bg.png");
   }
+
+  //styling transport card
+  &--transport &-image {
+    border-bottom: 3px solid $br-violet;
+  }
+  &--transport &-category {
+    color: $br-violet;
+  }
+  &--transport &-icon {
+    background-color: $br-violet;
+  }
+  &--transport &-icon::after {
+    background-image: url("../img/transport-bg.png");
+  }
+
+  // styling wide cards
+  &--double-width {
+    max-width: 454px;
+    min-height: 260px;
+
+    @include respond-to(medium-screens) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &--double-width &-icon {
+    top: 92px;
+    left: 24px;
+
+    @include respond-to(handhelds) {
+      top: 4px;
+      left: 4px;
+    }
+  }
+
+  &--double-width &-category {
+    top: 94px;
+    left: 94px;
+    font-family: "GothamMedium";
+    font-size: 18px;
+    color: #fff;
+    padding: 0;
+    transform: none;
+
+    @include respond-to(handhelds) {
+      top: 50px;
+      left: 66px;
+      font-size: 12px;
+    }
+  }
+
+  &--double-width &-rating {
+    top: 90px;
+    left: 258px;
+    transform: none;
+  }
+
+  &--double-width &-rating-counter {
+    color: #fff;
+  }
+
+  &--double-width &-rating-icon-bg {
+
+    @include respond-to(handhelds) {
+      padding-left: 88px;
+    }
+  }
+
+  &--double-width &-rating {
+
+    @include respond-to(handhelds) {
+      top: 26px;
+      left: 68px;
+    }
+  }
 }
 
 .item-description {
@@ -124,4 +274,9 @@
   font-size: 12px;
   text-align: center;
   padding-top: 16px;
+  display: block;
+  position: absolute;
+  bottom: 36px;
+  left: 50%;
+  transform: translateX(-50%);
 }

@@ -244,6 +244,18 @@ table {
 .main-catalog {
   width: 100%;
   margin: 0 auto; }
+  .main-catalog__more {
+    margin: 0 auto;
+    text-align: center; }
+    .main-catalog__more .fa-long-arrow-right {
+      color: #566375; }
+  .main-catalog__load {
+    color: #566375;
+    font-family: "GothamMedium";
+    font-size: 14px;
+    margin-bottom: 40px;
+    display: inline-block;
+    margin-right: 8px; }
   .main-catalog__header {
     padding-top: 16px;
     width: 90%;
@@ -355,19 +367,28 @@ table {
   background-color: #f3f1f2;
   width: 100%;
   padding-top: 42px;
-  border-top: 1px solid #e2dee0; }
+  border-top: 1px solid #e2dee0;
+  border-bottom: 1px solid #e2dee0;
+  border-bottom-width: 70%; }
 
 .main-catalog__row {
-  width: 80%;
+  width: 70%;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap; }
+  @media only screen and (max-width: 480px) {
+    .main-catalog__row {
+      width: 95%; } }
+  @media only screen and (min-width: 481px) and (max-width: 1023px) {
+    .main-catalog__row {
+      width: 85%; } }
 
 .main-catalog__item {
   position: relative;
   display: inline-block;
   max-width: 210px;
+  min-height: 260px;
   background-color: #fff;
   border-radius: 4px;
   margin-bottom: 32px; }
@@ -377,6 +398,9 @@ table {
       margin-right: auto; } }
   .main-catalog__item-image {
     border-bottom: 3px solid #b6c0c1; }
+    .main-catalog__item-image--double-width {
+      max-width: 100%;
+      max-height: 100%; }
   .main-catalog__item-icon {
     position: absolute;
     top: 110px;
@@ -405,11 +429,56 @@ table {
   .main-catalog__item-rating {
     text-align: center;
     padding-top: 6px;
-    margin-bottom: 8px; }
+    margin-bottom: 8px;
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%); }
     .main-catalog__item-rating-counter {
       font-family: "GothamMedium";
       font-size: 12px;
       color: #96a6a7; }
+  .main-catalog__item-rating-avatar {
+    position: absolute;
+    left: 22px;
+    top: 168px; }
+    @media only screen and (max-width: 480px) {
+      .main-catalog__item-rating-avatar {
+        top: 43%;
+        left: 4px; } }
+  .main-catalog__item-rating-user {
+    padding-top: 16px;
+    margin-bottom: 12px; }
+    @media only screen and (min-width: 481px) and (max-width: 1023px) {
+      .main-catalog__item-rating-user {
+        padding-left: 104px; } }
+    @media only screen and (min-width: 1024px) {
+      .main-catalog__item-rating-user {
+        padding-left: 104px; } }
+  .main-catalog__item-rating-author {
+    font-family: "GothamBold";
+    color: #566375;
+    font-size: 16px;
+    text-transform: uppercase;
+    display: block;
+    padding-top: 8px;
+    margin-bottom: 8px; }
+    @media only screen and (max-width: 480px) {
+      .main-catalog__item-rating-author {
+        padding-left: 88px; } }
+  .main-catalog__item-rating-comment {
+    font-size: 14px;
+    font-family: "GothamBook";
+    padding-right: 8px;
+    color: #838d9a; }
+    @media only screen and (max-width: 480px) {
+      .main-catalog__item-rating-comment {
+        padding-top: 24px;
+        padding-left: 8px; } }
+  .main-catalog__item-read-more {
+    font-size: 14px;
+    font-family: "GothamMedium";
+    color: #566375; }
   .main-catalog__item--estate .main-catalog__item-image {
     border-bottom: 3px solid #1baf5d; }
   .main-catalog__item--estate .main-catalog__item-category {
@@ -432,6 +501,54 @@ table {
     background-color: #f19e1f; }
   .main-catalog__item--music .main-catalog__item-icon::after {
     background-image: url("../img/music-bg.png"); }
+  .main-catalog__item--transport .main-catalog__item-image {
+    border-bottom: 3px solid #88499c; }
+  .main-catalog__item--transport .main-catalog__item-category {
+    color: #88499c; }
+  .main-catalog__item--transport .main-catalog__item-icon {
+    background-color: #88499c; }
+  .main-catalog__item--transport .main-catalog__item-icon::after {
+    background-image: url("../img/transport-bg.png"); }
+  .main-catalog__item--double-width {
+    max-width: 454px;
+    min-height: 260px; }
+    @media only screen and (min-width: 481px) and (max-width: 1023px) {
+      .main-catalog__item--double-width {
+        margin-left: auto;
+        margin-right: auto; } }
+  .main-catalog__item--double-width .main-catalog__item-icon {
+    top: 92px;
+    left: 24px; }
+    @media only screen and (max-width: 480px) {
+      .main-catalog__item--double-width .main-catalog__item-icon {
+        top: 4px;
+        left: 4px; } }
+  .main-catalog__item--double-width .main-catalog__item-category {
+    top: 94px;
+    left: 94px;
+    font-family: "GothamMedium";
+    font-size: 18px;
+    color: #fff;
+    padding: 0;
+    transform: none; }
+    @media only screen and (max-width: 480px) {
+      .main-catalog__item--double-width .main-catalog__item-category {
+        top: 50px;
+        left: 66px;
+        font-size: 12px; } }
+  .main-catalog__item--double-width .main-catalog__item-rating {
+    top: 90px;
+    left: 258px;
+    transform: none; }
+  .main-catalog__item--double-width .main-catalog__item-rating-counter {
+    color: #fff; }
+  @media only screen and (max-width: 480px) {
+    .main-catalog__item--double-width .main-catalog__item-rating-icon-bg {
+      padding-left: 88px; } }
+  @media only screen and (max-width: 480px) {
+    .main-catalog__item--double-width .main-catalog__item-rating {
+      top: 26px;
+      left: 68px; } }
 
 .item-description {
   font-family: "GothamMedium";
@@ -446,7 +563,12 @@ table {
   text-transform: uppercase;
   font-size: 12px;
   text-align: center;
-  padding-top: 16px; }
+  padding-top: 16px;
+  display: block;
+  position: absolute;
+  bottom: 36px;
+  left: 50%;
+  transform: translateX(-50%); }
 
 @font-face {
   font-family: 'GothamBook';
