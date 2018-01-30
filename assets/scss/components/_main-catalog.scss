@@ -3,8 +3,6 @@
   width: 100%;
   padding-top: 42px;
   border-top: 1px solid $br-lightgrey;
-  border-bottom: 1px solid $br-lightgrey;
-  border-bottom-width: 70%;
 }
 
 .main-catalog__row {
@@ -279,4 +277,10 @@
   bottom: 36px;
   left: 50%;
   transform: translateX(-50%);
+}
+
+.main-catalog__horizontal-line {
+  width: 70%;
+  margin: 0 auto;
+  border-bottom: 1px solid $br-lightgrey;
 }

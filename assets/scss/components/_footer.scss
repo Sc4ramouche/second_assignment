@@ -1,0 +1,127 @@
+.footer {
+  width: 100%;
+  background: url("../img/footer-background.jpg") no-repeat center center fixed;
+  background-size: cover;
+
+  &__subscribe {
+    width: 70%;
+    margin: 0 auto;
+    padding-top: 54px;
+    margin-bottom: 54px;
+    text-align: center;
+
+    @include respond-to(medium-screens) {
+      width: 85%;
+    }
+    @include respond-to(handhelds) {
+      width: 95%;
+    }
+
+    &-heading {
+      margin-bottom: 40px;
+      font-family: "GothamMedium";
+      font-size: 24px;
+      color: #fff;
+    }
+  }
+
+  &__form {
+    position: relative;
+
+    &-email {
+      margin: 0 auto;
+      max-width: 500px;
+      min-width: 400px;
+      padding: 18px 24px;
+      margin-bottom: 24px;
+
+      @include respond-to(handhelds) {
+        min-width: inherit;
+        padding-right: 24px;
+      }
+    }
+
+    &-submit {
+      position: absolute;
+      top: 4px;
+      right: 106px;
+      background-color: $br-red;
+      text-transform: uppercase;
+      color: #fff;
+      font-size: 14px;
+      font-family: "GothamMedium";
+
+      @include respond-to(handhelds) {
+        position: static;
+      }
+    }
+  }
+
+  &__container {
+    max-width: 600px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+  }
+
+  &__separate {
+    width: 70%;
+    margin: 0 auto;
+    border-bottom: 1px solid $br-transparentgrey;
+    margin-bottom: 40px;
+
+    @include respond-to(mediums-screens) {
+      width: 85%;
+    }
+    @include respond-to(handhelds) {
+      width: 95%;
+    }
+  }
+
+  &__navigation {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+
+    @include respond-to(mediums-screens) {
+      width: 85%;
+    }
+    @include respond-to(handhelds) {
+      width: 95%;
+    }
+
+    &-header {
+      display: inline-block;
+      margin-bottom: 24px;
+      padding-bottom: 3px;
+      font-family: "GothamMedium";
+      font-size: 16px;
+      color: #fff;
+      border-bottom: 1px solid $br-transparentgrey;
+    }
+
+    &-list-item:not(:last-child) {
+      margin-bottom: 8px;
+    }
+
+    &-link {
+      font-family: "GothamBook";
+      font-size: 14px;
+      color: $br-transparentgrey;
+      text-decoration: none;
+    }
+  }
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #fff;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #fff;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #fff;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #fff;
+}

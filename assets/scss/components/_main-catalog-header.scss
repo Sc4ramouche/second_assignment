@@ -88,11 +88,13 @@
     display: inline-block;
     text-align: left;
     color: $br-border-grey;
+    border-color: $br-border-grey;
     min-width: 160px;
   }
 
   &__select {
     color: $br-red;
+    border-color: $br-border-grey;
     box-sizing: border-box;
     min-width: 160px;
   }
