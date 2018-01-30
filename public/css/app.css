@@ -384,7 +384,7 @@ table {
   border-top: 1px solid #e2dee0; }
 
 .main-catalog__row {
-  width: 70%;
+  max-width: 940px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -703,6 +703,7 @@ table {
 
 .footer {
   width: 100%;
+  padding-bottom: 54px;
   background: url("../img/footer-background.jpg") no-repeat center center fixed;
   background-size: cover; }
   .footer__subscribe {
@@ -762,7 +763,8 @@ table {
     width: 70%;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between; }
+    justify-content: space-between;
+    flex-wrap: wrap; }
     @media only screen and (max-width: 480px) {
       .footer__navigation {
         width: 95%; } }
@@ -774,6 +776,11 @@ table {
       font-size: 16px;
       color: #fff;
       border-bottom: 1px solid #585249; }
+    @media only screen and (max-width: 480px) {
+      .footer__navigation-list {
+        margin-bottom: 24px;
+        margin-left: auto;
+        margin-right: auto; } }
     .footer__navigation-list-item:not(:last-child) {
       margin-bottom: 8px; }
     .footer__navigation-link {
@@ -781,6 +788,30 @@ table {
       font-size: 14px;
       color: #585249;
       text-decoration: none; }
+    .footer__navigation-social {
+      padding-right: 64px;
+      position: relative; }
+      @media only screen and (max-width: 480px) {
+        .footer__navigation-social {
+          display: block;
+          margin: 0 auto;
+          padding: 0;
+          min-height: 160px;
+          text-align: center; } }
+      .footer__navigation-social-copyright {
+        color: #585249;
+        font-family: "GothamBook";
+        font-size: 14px;
+        position: absolute;
+        bottom: 0;
+        left: 0; }
+    .footer__navigation-links-item {
+      display: inline-block;
+      margin-right: 16px; }
+    .footer__navigation-links-icon {
+      text-decoration: none;
+      color: #fff;
+      font-size: 30px; }
 
 ::-webkit-input-placeholder {
   /* Chrome/Opera/Safari */
